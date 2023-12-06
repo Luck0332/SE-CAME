@@ -5,13 +5,42 @@
     <link rel="stylesheet" href="mystyle.css" />
   </head>
   <body>
+    
+    <video autoplay loop muted playsinline class="back-video">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    <img src="logo.png" class="logo">
+    <div class="music">
+      <td class="text-music">Click here to play music >></td>
+      <img src="play.png" class="play-music" id="icon">
+    </div>
+<audio id="audio">
+  <source src="aduo.mp3" type="audio/mp3">
+</audio>
+
+<script>
+  var mysong = document.getElementById("audio")
+  var icon = document.getElementById("icon")
+
+  icon.onclick = function(){
+    if (mysong.paused) {
+      mysong.play();
+    } else {
+      mysong.pause();
+    }
+  }
+
+
+</script>
+
     <div class="top">
      <div class="main">
-            <h1> This is CSS101.html</h1>
+            <h1> Hello! My name is </h1>
+            <h2> Rattatui.</h2>
             <div class="box">
                 <div>
-                    <figure><img src="p1.jpg"></figure>
-                    <span>This is BOX</span>
+                    <figure><img src="rat.jpg" class="box-picture"></figure>
+                    <span>Hi Hi Hi</span>
                 </div>
             </div>
            
