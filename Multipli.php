@@ -7,11 +7,10 @@
 
     <div class="main">
         
-        <div>
+        <div class="main_two">
             <?php
             $my_val = isset($_POST['my_val']) ? $_POST['my_val'] : ''; // แก้ไขตรวจสอบค่าจากฟอร์ม
             ?>
-
             <h1>ตารางสูตรคูณ </h1>
             <br>
             <form method="post">
@@ -51,12 +50,14 @@
             }
 
             body {
-                padding: 5%;
-                background-image: url(picture.jpg);
+                padding: 2%;
+                background-image: url(picture_cat.jpg);
                 background-size: cover;
             }
 
             .main {
+
+                width: 300px;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -64,16 +65,22 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 5%;
-                color: #fff;
+                padding: 6%;
+                color: black;
 
-                
-                background: transparent;
+                background: rgba(255, 255, 255, 0.5); /* ทำให้สีขาวมีความโปร่งแสง */
                 border: 2px solid #ccc;
                 border-radius: 20px;
-                backdrop-filter: blur(10px);
+                backdrop-filter: blur(20px);
 
                 
+            }
+
+            .main_two{
+                width: 100%;
+                display: grid;
+                justify-content: center;
+                align-items: center;
             }
 
             .table_1 {
@@ -83,9 +90,20 @@
             
 
             .table_scroll {
+                width: 100%;
                 height: 40vh; /* กำหนดความสูงของ .main */
                 overflow-y: auto; /* เพิ่มการเลื่อนในแนวตั้ง */
                
+                background: rgba(255, 255, 255, 0.7); /* ทำให้สีขาวมีความโปร่งแสง */
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                backdrop-filter: blur(20px);
+            }
+
+            .main>button{
+                border: none;
+                outline: none;
+                border-radius: 40px;
             }
 
 
